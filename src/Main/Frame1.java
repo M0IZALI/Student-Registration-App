@@ -227,7 +227,7 @@ public class Frame1 extends JFrame implements ActionListener{
         Connection con = null;
         String sqlQuery = "insert into students values(?,?,?,?,?,?,?,?,?)";
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","f9a3142queryforyou");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","");
             if(con != null)
             System.out.println("Connection Established");
             PreparedStatement pst = con.prepareStatement(sqlQuery);
@@ -259,7 +259,7 @@ public class Frame1 extends JFrame implements ActionListener{
        else if(e.getSource() == fetch){ //if fetch button is clicked.
         String query = "Select * from students";
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","f9a3142queryforyou");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","");
             Statement statement = con.createStatement();
             ResultSet result = statement.executeQuery(query);
 
